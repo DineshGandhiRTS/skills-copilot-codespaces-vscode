@@ -1,94 +1,236 @@
-<header>
+# HT Tool - HackTheBox Companion
 
-<!--
-  <<< Author notes: Course header >>>
-  Read <https://skills.github.com/quickstart> for more information about how to build courses using this template.
-  Include a 1280×640 image, course name in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Next to "About", add description & tags; disable releases, packages, & environments.
-  Add your open source license, GitHub uses the MIT license.
--->
+A comprehensive web-based tool suite designed for HackTheBox challenges, penetration testing, and CTF competitions. Built with modern React and TypeScript, featuring a beautiful dark theme UI similar to Keka.
 
-# Code with GitHub Copilot
+![HT Tool](https://img.shields.io/badge/HT-Tool-00ff00?style=for-the-badge&logo=react&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-_GitHub Copilot can help you code by offering autocomplete-style suggestions right in VS Code and Codespaces._
+## 🚀 Features
 
-</header>
+### 🔧 Core Tools
+- **Encoder/Decoder**: Support for Base64, Base32, Hex, Binary, URL encoding, ROT13, Caesar Cipher, Vigenère Cipher, Morse Code, and Braille
+- **Hash Cracker**: Generate, analyze, and crack various hash algorithms (MD5, SHA1, SHA256, SHA512, bcrypt, Argon2, scrypt)
+- **Network Tools**: Port scanning, network analysis, and reconnaissance tools
+- **Web Tools**: Web application testing, vulnerability scanning, and header analysis
+- **CTF Tools**: Specialized tools for Capture The Flag challenges
 
-<!--
-  <<< Author notes: Step 1 >>>
-  Choose 3-5 steps for your course.
-  The first step is always the hardest, so pick something easy!
-  Link to docs.github.com for further explanations.
-  Encourage users to open new tabs for steps!
--->
+### 🎨 User Interface
+- **Modern Dark Theme**: Beautiful dark UI with custom styling
+- **Responsive Design**: Works perfectly on desktop, tablet, and mobile
+- **Real-time Feedback**: Toast notifications and loading states
+- **Interactive Components**: Hover effects, animations, and smooth transitions
 
-## Step 1: Leverage Codespaces with VS Code for Copilot
+### 🔒 Security Features
+- **Client-side Processing**: All sensitive operations happen locally
+- **No Data Storage**: No personal data is stored or transmitted
+- **Secure Defaults**: Built with security best practices
 
-_Welcome to "Develop With AI Powered Code Suggestions Using GitHub Copilot and VS Code"! :wave:_
+## 🛠️ Installation
 
-GitHub Copilot is an AI pair programmer that helps you write code faster and with less work. It draws context from comments and code to suggest individual lines and whole functions instantly. GitHub Copilot is powered by OpenAI Codex, a generative pretrained language model created by OpenAI.
+### Prerequisites
+- Node.js 16+ 
+- npm or yarn
 
-**Copilot works with many code editors including VS Code, Visual Studio, JetBrains IDE, and Neovim.**
+### Setup
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/ht-tool.git
+cd ht-tool
 
-Additionally, GitHub Copilot is trained on all languages that appear in public repositories. For each language, the quality of suggestions you receive may depend on the volume and diversity of training data for that language.
+# Install dependencies
+npm install
 
-Using Copilot inside a Codespace shows just how easy it is to get up and running with GitHub's suite of [Collaborative Coding](https://github.com/features#features-collaboration) tools.
+# Start development server
+npm run dev
 
-> **Note**
-> This skills exercise will focus on leveraging GitHub Codespace. It is recommended that you complete the GitHub skill, [Codespaces](https://github.com/skills/code-with-codespaces), before moving forward with this exercise.
+# Build for production
+npm run build
+```
 
-### :keyboard: Activity: Enable Copilot inside a Codespace
+## 📦 Available Scripts
 
-**We recommend opening another browser tab to work through the following activities so you can keep these instructions open for reference.**
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run preview      # Preview production build
+npm run lint         # Run ESLint
+npm run lint:fix     # Fix ESLint issues
+```
 
-Before you open up a codespace on a repository, you can create a development container and define specific extensions or configurations that will be used or installed in your codespace. Let's create this development container and add copilot to the list of extensions.
+## 🏗️ Project Structure
 
-1. Navigating back to your **Code** tab of your repository, click the **Add file** drop-down button, and then click `Create new file`.
-1. Type or paste the following in the empty text field prompt to name your file.
-   ```
-   .devcontainer/devcontainer.json
-   ```
-1. In the body of the new **.devcontainer/devcontainer.json** file, add the following content:
-   ```
-   {
-       // Name this configuration
-       "name": "Codespace for Skills!",
-       "customizations": {
-           "vscode": {
-               "extensions": [
-                   "GitHub.copilot"
-               ]
-           }
-       }
-   }
-   ```
-1. Select the option to **Commit directly to the `main` branch**, and then click the **Commit new file** button.
-1. Navigate back to the home page of your repository by clicking the **Code** tab located at the top left of the screen.
-1. Click the **Code** button located in the middle of the page.
-1. Click the **Codespaces** tab on the box that pops up.
-1. Click the **Create codespace on main** button.
+```
+src/
+├── components/          # Reusable UI components
+│   ├── Layout.tsx      # Main layout with sidebar
+│   └── LoadingSpinner.tsx
+├── pages/              # Application pages
+│   ├── Dashboard.tsx   # Main dashboard
+│   ├── Encoder.tsx     # Encoding tools
+│   ├── Decoder.tsx     # Decoding tools
+│   ├── HashCracker.tsx # Hash analysis
+│   ├── NetworkTools.tsx # Network scanning
+│   ├── WebTools.tsx    # Web testing
+│   ├── CTFTools.tsx    # CTF challenges
+│   └── Settings.tsx    # User preferences
+├── utils/              # Utility functions
+│   ├── encoding.ts     # Encoding/decoding algorithms
+│   └── hashing.ts      # Hash functions
+├── types/              # TypeScript type definitions
+│   └── index.ts
+├── assets/             # Static assets
+├── App.tsx             # Main application component
+├── main.tsx            # Application entry point
+└── index.css           # Global styles
+```
 
-   **Wait about 2 minutes for the codespace to spin itself up.**
+## 🎯 Usage Examples
 
-1. Verify your codespace is running. The browser should contain a VS Code web-based editor and a terminal should be present such as the below:
-   ![Screen Shot 2023-03-09 at 9 09 07 AM](https://user-images.githubusercontent.com/26442605/224102962-d0222578-3f10-4566-856d-8d59f28fcf2e.png)
-1. The `copilot` extension should show up in the VS Code extension list. Click the extensions sidebar tab. You should see the following:
-   ![Screen Shot 2023-03-09 at 9 04 13 AM](https://user-images.githubusercontent.com/26442605/224102514-7d6d2f51-f435-401d-a529-7bae3ae3e511.png)
+### Encoding Text
+```typescript
+import { encode } from './utils/encoding'
 
-**Wait about 60 seconds then refresh your repository landing page for the next step.**
+// Base64 encoding
+const encoded = encode('Hello World', 'base64')
+console.log(encoded) // SGVsbG8gV29ybGQ=
 
-<footer>
+// Caesar cipher with custom shift
+const caesar = encode('Hello World', 'caesar', { shift: 3 })
+console.log(caesar) // Khoor Zruog
+```
 
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
+### Hash Analysis
+```typescript
+import { hashString, analyzeHash } from './utils/hashing'
+
+// Generate hash
+const hash = hashString('password', 'md5')
+console.log(hash) // 5f4dcc3b5aa765d61d8327deb882cf99
+
+// Analyze hash
+const analysis = analyzeHash(hash)
+console.log(analysis.possibleAlgorithms) // ['md5']
+```
+
+## 🎨 Customization
+
+### Themes
+The application supports multiple themes:
+- **Dark Theme** (Default): Modern dark interface
+- **Light Theme**: Clean light interface  
+- **Auto Theme**: Follows system preference
+
+### Styling
+Built with Tailwind CSS for easy customization:
+```css
+/* Custom colors */
+.primary-500 { @apply bg-blue-500; }
+.success-500 { @apply bg-green-500; }
+.danger-500 { @apply bg-red-500; }
+```
+
+## 🔧 Configuration
+
+### Environment Variables
+Create a `.env` file in the root directory:
+```env
+VITE_APP_TITLE=HT Tool
+VITE_APP_VERSION=1.0.0
+```
+
+### Build Configuration
+Modify `vite.config.ts` for custom build settings:
+```typescript
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: 3000,
+    open: true
+  }
+})
+```
+
+## 🧪 Testing
+
+```bash
+# Run tests
+npm test
+
+# Run tests with coverage
+npm run test:coverage
+
+# Run tests in watch mode
+npm run test:watch
+```
+
+## 📦 Dependencies
+
+### Core Dependencies
+- **React 18**: Modern React with hooks
+- **TypeScript**: Type safety and better DX
+- **Vite**: Fast build tool and dev server
+- **Tailwind CSS**: Utility-first CSS framework
+- **Lucide React**: Beautiful icons
+
+### Development Dependencies
+- **ESLint**: Code linting
+- **PostCSS**: CSS processing
+- **Autoprefixer**: CSS vendor prefixes
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### Development Guidelines
+- Follow TypeScript best practices
+- Use functional components with hooks
+- Write meaningful commit messages
+- Add tests for new features
+- Update documentation as needed
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- **HackTheBox**: For inspiration and challenge types
+- **Keka**: For UI/UX inspiration
+- **React Team**: For the amazing framework
+- **Tailwind CSS**: For the utility-first CSS framework
+
+## 🐛 Known Issues
+
+- Some advanced CTF tools are simulated (coming in future versions)
+- Network scanning is limited to demo purposes
+- File upload functionality planned for v2.0
+
+## 🚀 Roadmap
+
+### v1.1 (Next Release)
+- [ ] File upload support
+- [ ] Advanced steganography tools
+- [ ] Real network scanning capabilities
+- [ ] User authentication system
+
+### v1.2 (Future)
+- [ ] Mobile app version
+- [ ] Collaborative features
+- [ ] Advanced CTF challenge solver
+- [ ] Integration with HackTheBox API
+
+## 📞 Support
+
+- **Issues**: [GitHub Issues](https://github.com/yourusername/ht-tool/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/yourusername/ht-tool/discussions)
+- **Email**: support@httool.com
 
 ---
 
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/code-with-copilot) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
-
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
-
-</footer>
+**Made with ❤️ for the security community**
