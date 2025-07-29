@@ -1,0 +1,54 @@
+{
+  "name": "ht-tool",
+  "version": "1.0.0",
+  "description": "A comprehensive HackTheBox tool similar to Keka for penetration testing and CTF challenges",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext js,jsx,ts,tsx",
+    "lint:fix": "eslint . --ext js,jsx,ts,tsx --fix"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1",
+    "lucide-react": "^0.263.1",
+    "clsx": "^1.2.1",
+    "tailwind-merge": "^1.14.0",
+    "framer-motion": "^10.16.4",
+    "react-hook-form": "^7.45.4",
+    "zod": "^3.22.2",
+    "@hookform/resolvers": "^3.3.1",
+    "react-hot-toast": "^2.4.1",
+    "axios": "^1.5.0",
+    "crypto-js": "^4.1.1",
+    "js-cookie": "^3.0.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@types/crypto-js": "^4.1.2",
+    "@types/js-cookie": "^3.0.3",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "postcss": "^8.4.27",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  },
+  "keywords": [
+    "hackthebox",
+    "ctf",
+    "penetration-testing",
+    "security",
+    "tools"
+  ],
+  "author": "HT Tool Team",
+  "license": "MIT"
+}
